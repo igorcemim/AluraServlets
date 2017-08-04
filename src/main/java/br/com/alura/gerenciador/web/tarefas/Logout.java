@@ -1,4 +1,4 @@
-package br.com.alura.gerenciador.web;
+package br.com.alura.gerenciador.web.tarefas;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

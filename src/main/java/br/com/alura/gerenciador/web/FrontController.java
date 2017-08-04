@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.com.alura.gerenciador.web.tarefas.Tarefa;
+
 @WebServlet(urlPatterns="/tarefas")
 public class FrontController extends HttpServlet {
 
@@ -24,7 +26,7 @@ public class FrontController extends HttpServlet {
 				throw new IllegalArgumentException("Tarefa não informada.");
 			}
 
-			String nomeDaClasse = "br.com.alura.gerenciador.web." + tarefa;
+			String nomeDaClasse = "br.com.alura.gerenciador.web.tarefas." + tarefa;
 			Class<?> classe = Class.forName(nomeDaClasse);
 			Tarefa instancia = (Tarefa) classe.newInstance();
 
